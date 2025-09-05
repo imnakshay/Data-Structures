@@ -3,9 +3,10 @@
         {
             "name": "windows-gcc-x86",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/include/x86_64-linux-gnu/c++/14"
             ],
-            "compilerPath": "C:/MinGW/bin/gcc.exe",
+            "compilerPath": "/usr/bin/gcc",
             "cStandard": "${default}",
             "cppStandard": "c++23",
             "intelliSenseMode": "windows-gcc-x86",
