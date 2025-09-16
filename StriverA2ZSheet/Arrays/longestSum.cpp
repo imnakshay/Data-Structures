@@ -28,7 +28,7 @@ int maxLen(vector<int> &arr,int k){
 }
 
 int main(){
-    vector<int> arr = {-2,1,-3,4,-1,2,1,-5,4};
-    int k = 15;
+    vector<int> arr = {4,1,0,4,0,0,3};
+    int k = 5;
     cout<<maxLen(arr,k);
 }
