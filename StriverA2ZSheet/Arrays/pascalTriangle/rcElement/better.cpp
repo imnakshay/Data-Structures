@@ -10,11 +10,10 @@ using namespace std;
         exit(0);
     }
 
-    int numerator = 1;
-    int denominator = 1;
+    int result=  1;;
     for(int i = 0 ; i<col;i++){
-        numerator*= row-i;
-        denominator *= col-i;
+        result*= row-i;
+        result/=i+1;
     }
-    cout<<numerator/denominator;
+    cout<<result;
  }
