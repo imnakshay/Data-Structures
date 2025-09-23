@@ -1,21 +1,12 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int pElement(int row,int col){
-    row--;
-    col--;
-    int result = 1;
-    for(int i = 0;i<col;i++){
-        result *= row-i;
-        result/=i+1;
-    }
-    return result;
-}
-
 vector<int> pRow(int row){
-    vector<int> result;
-    for(int col = 1;col<=row;col++){
-        result.push_back(pElement(row,col));
+    vector<int> result{1};
+    int element = 1;
+    for(int col = 1;col<row;col++){
+        element *= (row-col)/col;
+        result.push_back(element);
     }
     return result;
 }
