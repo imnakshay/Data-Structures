@@ -3,16 +3,12 @@ using namespace std;
 
 int main()
 {
-    vector<int> arr = {1,4,6,8,9};
-    int target = 4;
+    vector<int> arr = {3, 4, 6, 7, 9, 12, 16, 17};
+    int target = 17;
     int n = arr.size();
     int left = 0, right = n-1;
     int pos = -1;
     while(left<=right){
-        if(left ==  right){
-            if(arr[left]==target) pos = left;
-            break;
-        }
         int mid = (left+right)/2;
         if(arr[mid] ==target){
             pos = mid;
