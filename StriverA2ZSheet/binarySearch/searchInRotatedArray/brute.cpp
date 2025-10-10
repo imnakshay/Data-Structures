@@ -3,7 +3,10 @@ using namespace std;
 
 int position(vector<int> &arr, int target){
     int n = arr.size();
-    for(in)
+    for(int i = 0 ; i<n;i++){
+        if(arr[i]== target) return i;
+    }
+    return -1;
 }
 
 int main(){
