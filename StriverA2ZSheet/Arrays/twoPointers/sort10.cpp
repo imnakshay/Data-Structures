@@ -13,7 +13,7 @@ void sort(vector<int> & arr){
 }
 
 int main(){
-    vector<int> arr = {1,1,1,1};
+    vector<int> arr = {0,0,0,0,1,0,1,1,0,0,1};
 
     sort(arr);
     for(auto x : arr) cout<<x<<" ";
