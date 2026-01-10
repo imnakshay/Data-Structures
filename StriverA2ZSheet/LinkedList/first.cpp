@@ -23,6 +23,7 @@ int main(){
 
     Node * head = n1;
 
+    n2 = n2->next;
     // traversing in the linked list
     Node * temp = head;
     while(temp != NULL){
