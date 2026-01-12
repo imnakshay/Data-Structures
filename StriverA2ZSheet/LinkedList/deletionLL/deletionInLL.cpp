@@ -76,12 +76,35 @@ void removeKthElement(Node *& head, int k){
         if(!temp->next) return;
         temp = temp->next;
     }
-    if(!temp->next) return;
+    // if(!temp->next) return;
     Node * n = temp->next;
     temp->next = temp->next->next;
     delete n;
 
 }
+
+//we have to remove the node whose has the given data.
+void removeValue(Node*& head,int value){
+    if(!head) return;
+    if(head->data == value) {
+        Node * temp = head->next;
+        delete head;
+        head = temp;
+        return;
+    }
+    //we will stop at one node before the value node.
+    Node * temp = head;
+    while(temp && temp->next){
+        if(temp->next->data == value){
+            Node * toDelete = temp->next;
+            temp->next = temp->next->next;
+            delete toDelete;
+            return;
+        }
+        temp = temp->next;
+    }
+}
+
 // it is the main function..
 int main(){
     Node * head = new Node(1);
@@ -90,7 +113,8 @@ int main(){
     head->next->next->next = new Node(4);
     // removeHead(head);
     // removeTail(head);
-    removeKthElement(head,4);
+    // removeKthElement(head,4);
+    removeValue(head,1);
     traverse(head);
     
 }
